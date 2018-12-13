@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container my-3">
+        <h1>Задание 3</h1>
+        <hr class="border-success">
+        <div class="form-wrapper my-4">
+            <p>3. Создать форму обратной связи с полями: Имя, Телефон, e-mail, текст, кнопка «Отправить».</p>
+            <ul>
+                <li>** - При нажатии на кнопку «Отправить» произвести валидацию полей следующим образом:</li>
+                <li>- Имя содержит только буквы;</li>
+                <li>** - Телефон подчиняется шаблону +7(000)000-0000;**</li>
+                <li>** - E-mail выглядит как mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru**</li>
+                <li>** - Текст произвольный;**</li>
+                <li>** - В случае не прохождения валидации одним из полей необходимо выделять это поле красной рамкой и сообщать пользователю об ошибке.**</li>
+            </ul>
+            <div class="col-10 mx-auto">
+                <div class="border border-success rounded p-4">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <!--is-invalid-->
+                        <input type="text" class="form-control" id="name" placeholder="Введите имя">
+                        <div class="invalid-feedback">Введенно не корректное имя</div>
+                        <div class="valid-feedback">Введенно корректное имя</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <!--is-invalid-->
+                        <input type="text" class="form-control" id="phone" placeholder="Введите телефон +7(000)000-0000">
+                        <div class="invalid-feedback">Введен не корректный телефон</div>
+                        <div class="valid-feedback">Введен корректный телефон</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <!--is-invalid-->
+                        <input type="email" class="form-control" id="email" placeholder="Введите email">
+                        <div class="invalid-feedback">Введен не корректный email</div>
+                        <div class="valid-feedback">Введен корректный email</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="textarea">Ваш вопрос:</label>
+                        <!--is-invalid-->
+                        <textarea class="form-control" id="textarea" rows="3"></textarea>
+                    </div>
+                    <button id="fSubmit" class="btn btn-dark btn-block">Задать вопрос</button>
+                </div>
+            </div>
+        </div>
+        <hr class="border-success"> </div>
+</body>
+
+</html>
